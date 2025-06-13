@@ -1,0 +1,56 @@
+* To create a vite
+  npm create vite@latest
+
+Microsoft Windows [Version 10.0.19045.5965]
+(c) Microsoft Corporation. All rights reserved.
+
+D:\React_Related>npm create vite@latest
+Need to install the following packages:
+create-vite@6.5.0
+Ok to proceed? (y) y
+
+
+> npx
+> create-vite
+
+|
+o  Project name:
+|  vite-react
+|
+o  Select a framework:
+|  React
+|
+o  Select a variant:
+|  JavaScript
+|
+o  Scaffolding project in D:\React_Related\vite-react...
+|
+—  Done. Now run:
+
+  cd vite-react
+  npm install
+  npm run dev
+
+
+D:\React_Related>cd vite-react
+
+D:\React_Related\vite-react>npm install
+
+added 199 packages, and audited 200 packages in 30s
+
+33 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+
+D:\React_Related\vite-react> npm run dev
+
+> vite-react@0.0.0 dev
+> vite
+
+
+  VITE v6.3.5  ready in 404 ms
+
+  ➜  Local:   http://localhost:5173/
+  ➜  Network: use --host to expose
+  ➜  press h + enter to show help
