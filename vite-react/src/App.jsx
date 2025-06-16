@@ -1,17 +1,29 @@
+import { useState } from "react";
 import "./App.css";
 
 function App() {
 
   const total =<>{5 + 6}</>
-  // const element = <h1>Hello World</h1>;
+  const element = <h1>Hello World</h1>;
+  const [imageUrl,setImageUrl] = useState("https://picsum.photos/100/200");
+  function imageChange() {
+    alert("Image Changed");
+    setImageUrl(`https://picsum.photos/100/200?random=${Math.floor(Math.random() * 1000)}`);
+  }
   return <>
-
-   <h1>....................,{total},..................</h1>
-   <img src="https://picsum.photos/100/200" alt="Random" />
-   <button onClick={() => alert("Hello World")}style={{ backgroundColor: "green", color: "white", }}>
+    <h1>{element}</h1>
+    <h1>....................,{total},..................</h1>
+    <div>
+        <img src={imageUrl} alt="Random" />
+      </div>
+    <button onClick={imageChange} style={{ backgroundColor: "green", color: "white" }}>
       Click Me
     </button>
+    
   </>;
 }
+
+
+
 
 export default App;
