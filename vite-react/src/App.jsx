@@ -1,33 +1,34 @@
-import { useState } from "react";
 import "./App.css";
-
-function App() {
-
-  let total1 =<>{Math.floor(Math.random() *1000)}</>
-  const element = <h1>Hello World</h1>;
-  const [imageUrl,setImageUrl] = useState("https://picsum.photos/100/200");
-  const isloggedIn = false;
-  function imageChange() {
-    const total= Math.floor(Math.random() * 1000);
-    alert("Image Changed");
-    setImageUrl(`https://picsum.photos/100/200?random=${total}`);
-    // window.location.reload();
-  }
-  return <>
-  <h1>{isloggedIn?"Walcome":" Please login"} </h1>
-    <h1>{element}</h1>
-    <h1>{total1}</h1>
-    <div>
-        <img src={imageUrl} alt="Random" />
-      </div>
-    <button onClick={imageChange} style={{ backgroundColor: "green", color: "white" }}>
-      Click Me
-    </button>
-    
-  </>;
+function welcomeMessage(name) {
+  return <h1>Hello, {name}!</h1>;
+}
+function greeting(istrue) {
+  return <h1>{istrue? 'Good Morning': 'Good Evining'}</h1>
 }
 
+function showalert(condition,message) {
+  if(condition) {
+   return alert(message);
+  }
+}
 
+function App() {
+  const now = new Date();
+  const istrue = now.getHours() < 12;
 
+  {showalert(istrue, "Good Morning! Have a great day!")}
+  {showalert(!istrue, "Good Evening! Hope you had a nice day!")}
+
+  return (
+    <div>
+    {welcomeMessage("Alice")}
+    {welcomeMessage('Bob')}
+    {welcomeMessage("Jhon")}
+    {greeting(istrue)}
+    <h2>Current Time: {now.toLocaleTimeString()}</h2>
+    </div>
+  
+  )
+}
 
 export default App;
