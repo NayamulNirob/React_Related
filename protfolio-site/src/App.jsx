@@ -106,7 +106,12 @@ function App() {
           {projects.map((project, index) => (
             <ul key={index}>
               <strong>{project.title}:</strong> {project.description}
-            </ul>
+            </ul>,
+            <img
+              src={images[`project${index + 1}`]}
+              alt={project.title}
+              className="project-image"
+            />
           ))}
         </>
       </section>
