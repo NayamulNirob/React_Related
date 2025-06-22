@@ -4,18 +4,26 @@ function App() {
   const name = "MD. NAYAMUL ISLAM";
   const profession = "Full Stack Developer";
   const projects = [
-    { title: "Project 1", description: "Description of Project 1" },
-    { title: "Project 2", description: "Description of Project 2" },
-    { title: "Project 3", description: "Description of Project 3" },
+    { title: "Project 1", description: "Description of Project 1",link:"a" },
+    { title: "Project 2", description: "Description of Project 2",link:"b" },
+    { title: "Project 3", description: "Description of Project 3",link:"c" },
   ];
   const skills = [
     "HTML",
     "CSS",
     "JavaScript",
+    "Java",
+    "Dart",
+    "SQL",
+    "PL/SQL",
     "React",
-    "Node.js",
-    "Express",
-    "MongoDB",
+    "Spring Boot",
+    "Angular",
+    "Oracle",
+    "Oracle Apex",
+    "Flutter",
+    "My SQL",
+    "Postgre SQL",
   ];
   const education = [
     {
@@ -62,16 +70,14 @@ function App() {
     "Photography",
     "Gaming",
   ];
-  const languages = [
-    "English (Fluent)",
-    "Bangla (Native)"];
-  const socialLinks = {
-    github: "",
-    linkedin: "",
-    twitter: "",
-    facebook: "",
-    instagram: "",
-  };
+  const languages = ["English (Fluent)", "Bangla (Native)"];
+  const socialLinks = 
+    {github:"" ,
+    linkedin: "" ,
+     twitter: "" ,
+     facebook: "" ,
+     instagram: "" ,
+    };
   const images = {
     profile: "https://example.com/profile.jpg",
     project1: "https://example.com/project1.jpg",
@@ -84,14 +90,13 @@ function App() {
         <h2>{name}</h2>
         <p>{profession}</p>
         <nav>
-          <ul>
             <a href="#about">About</a>
+            <a href="#skills">Skills</a>
             <a href="#projects">Projects</a>
             <a href="#contact">Contact</a>
-          </ul>
         </nav>
       </header>
-      <section id="about">
+      <section id="about" className="about">
         <h2>About Me</h2>
         <p>
           I am a passionate Full Stack Developer with experience in building
@@ -100,20 +105,28 @@ function App() {
         </p>
       </section>
       <section id="projects" className="projects">
-        <h3>Projects</h3>
+        <h2>Projects</h2>
         <p>Here are some of the projects I have worked on:</p>
-        <>
-          {projects.map((project, index) => (
-            <ul key={index}>
-              <strong>{project.title}:</strong> {project.description}
-            </ul>,
-            <img
-              src={images[`project${index + 1}`]}
-              alt={project.title}
-              className="project-image"
-            />
-          ))}
-        </>
+        <div className="project-list">
+          {projects.map(
+            (project, index) => (
+              (
+                <div key={index} className='project-item'>
+                  <h2>{project.title}:</h2> <h3>{project.description}</h3>
+                  <a href={project.link} target="_blank" rel="noprojecttillnowadded">View Project</a>
+                </div>
+
+              )
+              // (
+              //   <img
+              //     src={images[`project${index + 1}`]}
+              //     alt={project.title}
+              //     className="project-image"
+              //   />
+              // )
+            )
+          )}
+        </div>
       </section>
       <section id="contact" className="contact">
         <h2>Contact Me</h2>
