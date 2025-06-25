@@ -1,12 +1,12 @@
 import "./App.css";
+import About from "./components/About";
+import Footer from "./components/App-footer";
 import Header from "./components/App-header";
+import Contact from "./components/contact";
+import Project from "./components/Projects";
 
 function App() {
-  const projects = [
-    { title: "Project 1", description: "Description of Project 1",link:"a" },
-    { title: "Project 2", description: "Description of Project 2",link:"b" },
-    { title: "Project 3", description: "Description of Project 3",link:"c" },
-  ];
+
   // const skills = [
   //   "HTML",
   //   "CSS",
@@ -77,58 +77,14 @@ function App() {
   //    facebook: "" ,
   //    instagram: "" ,
   //   };
-  const images = {
-    profile: "https://example.com/profile.jpg",
-    project1: "https://example.com/project1.jpg",
-    project2: "https://example.com/project2.jpg",
-    project3: "https://example.com/project3.jpg",
-  };
+
   return (
     <div className="App">
       <Header/>
-      <section id="about" className="about">
-        <h2>About Me</h2>
-        <p>
-          I am a passionate Full Stack Developer with experience in building
-          dynamic web applications. I love coding and enjoy learning new
-          technologies.
-        </p>
-      </section>
-      <section id="projects" className="projects">
-        <h2>Projects</h2>
-        <p>Here are some of the projects I have worked on:</p>
-        <div className="project-list">
-          {projects.map(
-            (project, index) => (
-              (
-                <div key={index} className='project-item'>
-                  <h2>{project.title}:</h2> <h3>{project.description}</h3>
-                  <a href={project.link} target="_blank" rel="noprojecttillnowadded">View Project</a>
-                </div>
-
-              ),
-              (
-                <img
-                  src={images[`project${index + 1}`]}
-                  alt={project.title}
-                  className="project-image"
-                />
-              )
-            )
-          )}
-        </div>
-      </section>
-      <section id="contact" className="contact">
-        <h2>Contact Me</h2>
-        <p>
-          Feel free to reach out to me via email at{" "}
-          <a href="mailto:nayamulislam@gmail.com">nayamulislam@gmail.com</a>
-        </p>
-      </section>
-
-      <footer className="App-footer">
-        <p>© 2025 My React App</p>
-      </footer>
+      <About/>
+      <Project/>
+      <Contact/>
+      <Footer/>
     </div>
   );
 }
