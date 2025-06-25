@@ -27,8 +27,8 @@ function App() {
   // {
   //   showalert(!istrue, "Good Evening! Hope you had a nice day!");
   // }
-  <Showalert isMorning={istrue} message="Good Morning! Have a great day!" />;
-  <Showalert isMorning={!istrue} message="Good Evening! Hope you had a nice day!" />;
+  <Showalert istrue={istrue} message="Good Morning! Have a great day!" />;
+  <Showalert istrue={!istrue} message="Good Evening! Hope you had a nice day!" />;
 
   return (
     <div>
@@ -36,7 +36,7 @@ function App() {
       <WelcomeMessage name="Bob"/>
       <WelcomeMessage name ="Lion"/>
       {/* {greeting(istrue)} */}
-      <Greeting isMorning={istrue} />
+      <Greeting istrue={istrue} />
       <MyButton />
       <h2>Current Time: {now.toLocaleTimeString()}</h2>
     </div>
