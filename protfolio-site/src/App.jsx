@@ -1,8 +1,7 @@
 import "./App.css";
+import Header from "./components/App-header";
 
 function App() {
-  const name = "MD. NAYAMUL ISLAM";
-  const profession = "Full Stack Developer";
   const projects = [
     { title: "Project 1", description: "Description of Project 1",link:"a" },
     { title: "Project 2", description: "Description of Project 2",link:"b" },
@@ -86,16 +85,7 @@ function App() {
   };
   return (
     <div className="App">
-      <header className="App-header">
-        <h2>{name}</h2>
-        <p>{profession}</p>
-        <nav>
-            <a href="#about">About</a>
-            <a href="#skills">Skills</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
-        </nav>
-      </header>
+      <Header/>
       <section id="about" className="about">
         <h2>About Me</h2>
         <p>
