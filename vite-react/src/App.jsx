@@ -15,7 +15,6 @@ function App() {
       <WelcomeMessage name="Alice" />
       <WelcomeMessage name="Bob"/>
       <WelcomeMessage name ="Lion"/>
-      {/* {greeting(istrue)} */}
       <Greeting istrue={istrue}/>
       <MyButton />
       <Showalert condition={istrue} message="Good Morning! Have a great day!"/>
