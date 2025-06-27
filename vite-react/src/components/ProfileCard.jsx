@@ -1,4 +1,7 @@
 // Using Destructuring to access props in a functional component
+
+import PropTypes from 'prop-types';
+
 function ProfileCard({ name, age, location, bio, hobbies, occupation, isMember }) {
 
     return(
@@ -13,6 +16,18 @@ function ProfileCard({ name, age, location, bio, hobbies, occupation, isMember }
     </div>
 
     );
+}
+
+// PropTypes for ProfileCard component Validation
+
+ProfileCard.propTypes = {
+    name: PropTypes.string.isRequired,
+    age: PropTypes.number.isRequired,
+    location: PropTypes.string.isRequired,
+    bio: PropTypes.string.isRequired,
+    hobbies: PropTypes.arrayOf(PropTypes.string).isRequired,
+    occupation: PropTypes.string.isRequired,
+    isMember: PropTypes.bool.isRequired
 }
 
 

@@ -27,3 +27,8 @@ Inside that directory, you can run several commands:
 
 * To create a vite
   npm create vite@latest
+
+
+
+* To Add any validation In react component
+    npm install prop-types
