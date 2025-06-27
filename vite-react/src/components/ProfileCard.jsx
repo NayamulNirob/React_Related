@@ -8,6 +8,7 @@ function ProfileCard(props){
         <p><b>Bio: {props.bio}</b></p>
         <p><b>Hobbies: {props.hobbies.join(', ')}</b></p>
         <p><b>Occupation: {props.occupation}</b></p>
+        <p><b>Status: {props.isMember? "Active":"Guest"}</b></p>
     </div>
 
     );

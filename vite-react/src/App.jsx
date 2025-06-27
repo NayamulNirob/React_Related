@@ -29,6 +29,17 @@ function App() {
       bio="A software developer with a passion for coding and technology."
       hobbies={["Reading", "Traveling", "Gaming"]}
       occupation="Software Engineer"
+      isMember={true}
+      />,
+
+      <ProfileCard
+      name="Jane Smith"
+      age={28}
+      location="San Francisco"
+      bio="A creative designer who loves art and innovation."
+      hobbies={["Painting", "Photography", "Hiking"]}
+      occupation="Graphic Designer"
+      isMember={false}
       />
     </div>
   );
