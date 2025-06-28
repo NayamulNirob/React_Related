@@ -1,36 +1,59 @@
 // Using Destructuring to access props in a functional component
 
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
-function ProfileCard({ name, age, location, bio, hobbies, occupation, isMember }) {
-
-    return(
+function ProfileCard({
+  name,
+  age,
+  location,
+  bio,
+  hobbies,
+  occupation,
+  skills,
+  isMember,
+}) {
+  return (
     <div>
-        <h3>Name: {name}</h3>
-        <p><b>Age: {age}</b></p>
-        <p><b>Location: {location}</b></p>
-        <p><b>Bio: {bio}</b></p>
-        <p><b>Hobbies: {hobbies.join(', ')}</b></p>
-        <p><b>Occupation: {occupation}</b></p>
-        <p><b>Status: {isMember? "Active":"Guest"}</b></p>
+      <h3>Name: {name}</h3>
+      <p>
+        <b>Age: {age}</b>
+      </p>
+      <p>
+        <b>Location: {location}</b>
+      </p>
+      <p>
+        <b>Bio: {bio}</b>
+      </p>
+      <p>
+        <b>Skills : {skills.map((value,index)=>{
+            return <span key={index}>{value} </span>;
+        })}</b>
+      </p>
+      <p>
+        <b>Hobbies: {hobbies.join(", ")}</b>
+      </p>
+      <p>
+        <b>Occupation: {occupation}</b>
+      </p>
+      <p>
+        <b>Status: {isMember ? "Active" : "Guest"}</b>
+      </p>
     </div>
-
-    );
+  );
 }
 
 // PropTypes for ProfileCard component Validation
 
 ProfileCard.propTypes = {
-    name: PropTypes.string.isRequired,
-    age: PropTypes.number.isRequired,
-    location: PropTypes.string.isRequired,
-    bio: PropTypes.string.isRequired,
-    hobbies: PropTypes.arrayOf(PropTypes.string).isRequired,
-    occupation: PropTypes.string.isRequired,
-    isMember: PropTypes.bool.isRequired
-}
-
-
+  name: PropTypes.string.isRequired,
+  age: PropTypes.number.isRequired,
+  location: PropTypes.string.isRequired,
+  bio: PropTypes.string.isRequired,
+  hobbies: PropTypes.arrayOf(PropTypes.string).isRequired,
+  skills: PropTypes.arrayOf(PropTypes.string).isRequired,
+  occupation: PropTypes.string.isRequired,
+  isMember: PropTypes.bool.isRequired,
+};
 
 //Using Dot Notation to access props in a functional component
 // function ProfileCard(props){

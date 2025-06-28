@@ -27,6 +27,7 @@ function App() {
       location="New York"
       bio="A software developer with a passion for coding and technology."
       hobbies={["Reading", "Traveling", "Gaming"]}
+      skills={["Java,", " JavaScript,", " React,", " Flutter"]}
       occupation="Software Engineer"
       isMember={true}
       />,
@@ -37,6 +38,7 @@ function App() {
       location="San Francisco"
       bio="A creative designer who loves art and innovation."
       hobbies={["Painting", "Photography", "Hiking"]}
+      skills={["Photoshop,", " Illustrator,", " Figma"]}
       occupation="Graphic Designer"
       isMember={false}
       />
