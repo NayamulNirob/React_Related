@@ -68,7 +68,7 @@ ProfileCard.propTypes = {
 //         <p><b>Occupation: {props.occupation}</b></p>
 //         <p><b>Status: {props.isMember? "Active":"Guest"}</b></p>
 //     </div>
-
+ 
 //     );
 // }
 
