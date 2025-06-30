@@ -1,6 +1,7 @@
 // Using Destructuring to access props in a functional component
 
 import PropTypes from "prop-types";
+import "./ProfileCard.css";
 
 function ProfileCard({
   name,
@@ -13,7 +14,7 @@ function ProfileCard({
   isMember,
 }) {
   return (
-    <div>
+    <div  className="profile-card">
       <h3>Name: {name}</h3>
       <p>
         <b>Age: {age}</b>
@@ -36,7 +37,10 @@ function ProfileCard({
         <b>Occupation: {occupation}</b>
       </p>
       <p>
-        <b>Status: {isMember ? "Active" : "Guest"}</b>
+        <b>Status:</b>
+        <span className={isMember ? "status-active" : "status-guest"}>
+          {isMember ? "Active" : "Guest"}
+        </span>
       </p>
     </div>
   );
