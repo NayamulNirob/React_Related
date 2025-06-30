@@ -11,10 +11,11 @@ function ProfileCard({
   hobbies,
   occupation,
   skills,
+  onSkillsClick,
   isMember,
 }) {
   return (
-    <div  className="profile-card">
+    <div className="profile-card">
       <h3>Name: {name}</h3>
       <p>
         <b>Age: {age}</b>
@@ -26,9 +27,16 @@ function ProfileCard({
         <b>Bio: {bio}</b>
       </p>
       <p>
-        <b>Skills : {skills.map((value,index)=>{
-            return <span key={index}>{value} </span>;
-        })}</b>
+        <b>
+          Skills :{" "}
+          {skills.map((skill, index) => {
+            return (
+              <span key={index} onClick={() => onSkillsClick(skill)}>
+                {skill}{" "}
+              </span>
+            );
+          })}
+        </b>
       </p>
       <p>
         <b>Hobbies: {hobbies.join(", ")}</b>
@@ -72,7 +80,7 @@ ProfileCard.propTypes = {
 //         <p><b>Occupation: {props.occupation}</b></p>
 //         <p><b>Status: {props.isMember? "Active":"Guest"}</b></p>
 //     </div>
- 
+
 //     );
 // }
 

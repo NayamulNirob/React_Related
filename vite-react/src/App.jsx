@@ -9,6 +9,22 @@ function App() {
   const now = new Date();
   const istrue = now.getHours() < 12;
 
+  const handleSkillsClick = (skill) => {
+    alert(`You clicked on the hobby: ${skill}`);
+  };
+
+  const jhonProfile={
+      name:"John Doe",
+          age:30,
+          location:"New York",
+          bio:"A software developer with a passion for coding and technology.",
+          hobbies:["Reading", "Traveling", "Gaming"],
+          skills:["Java", " JavaScript", " React", " Flutter"],
+          onSkillsClick:handleSkillsClick,
+          occupation:"Software Engineer",
+          isMember:true
+  };
+
   return (
     <div>
       <WelcomeMessage name="Alice" />
@@ -24,16 +40,7 @@ function App() {
       <h2>Current Time: {now.toLocaleTimeString()}</h2>
 
       <div className="app-container">
-        <ProfileCard
-          name="John Doe"
-          age={30}
-          location="New York"
-          bio="A software developer with a passion for coding and technology."
-          hobbies={["Reading", "Traveling", "Gaming"]}
-          skills={["Java,", " JavaScript,", " React,", " Flutter"]}
-          occupation="Software Engineer"
-          isMember={true}
-        />
+        <ProfileCard  {...jhonProfile}/>
         ,
         <ProfileCard
           name="Jane Smith"
@@ -41,12 +48,12 @@ function App() {
           location="San Francisco"
           bio="A creative designer who loves art and innovation."
           hobbies={["Painting", "Photography", "Hiking"]}
-          skills={["Photoshop,", " Illustrator,", " Figma"]}
+          skills={["Photoshop", " Illustrator", " Figma"]}
+          onSkillsClick={handleSkillsClick}
           occupation="Graphic Designer"
           isMember={false}
         />
       </div>
-
     </div>
   );
 }
