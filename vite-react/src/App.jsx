@@ -1,4 +1,5 @@
 import "./App.css";
+import ChildComponents from "./components/ChildComponents";
 import Greeting from "./components/Greetings";
 import MyButton from "./components/MyButton";
 import ProfileCard from "./components/ProfileCard";
@@ -9,12 +10,12 @@ import React, { useState } from 'react';
 function App() {
   const now = new Date();
   const istrue = now.getHours() < 12;
-  
+
   const [count, setCount] = useState(0);
 
 
   const handleSkillsClick = (skill) => {
-    alert(`You clicked on the hobby: ${skill}`);
+    alert(`You clicked on the Skill: ${skill}`);
   };
 
 
@@ -43,6 +44,10 @@ function App() {
         condition={!istrue}
         message="Good Evening! Hope you had a nice day!"
       />
+
+      <div> 
+        <ChildComponents buttonName="Hello"/>
+      </div>
       <h2>Current Time: {now.toLocaleTimeString()}</h2>
 
       <div className="app-container">
