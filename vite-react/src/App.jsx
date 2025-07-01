@@ -10,9 +10,8 @@ import React, { useState } from 'react';
 function App() {
   const now = new Date();
   const istrue = now.getHours() < 12;
-
+  
   const [count, setCount] = useState(0);
-
 
   const handleSkillsClick = (skill) => {
     alert(`You clicked on the Skill: ${skill}`);
