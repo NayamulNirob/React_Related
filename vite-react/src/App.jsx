@@ -4,14 +4,19 @@ import MyButton from "./components/MyButton";
 import ProfileCard from "./components/ProfileCard";
 import Showalert from "./components/ShowAlart";
 import WelcomeMessage from "./components/WelcomeMessage";
+import React, { useState } from 'react';
 
 function App() {
   const now = new Date();
   const istrue = now.getHours() < 12;
+  
+  const [count, setCount] = useState(0);
+
 
   const handleSkillsClick = (skill) => {
     alert(`You clicked on the hobby: ${skill}`);
   };
+
 
   const jhonProfile={
       name:"John Doe",
@@ -31,7 +36,8 @@ function App() {
       <WelcomeMessage name="Bob" />
       <WelcomeMessage name="Lion" />
       <Greeting istrue={istrue} />
-      <MyButton />
+      <div>Count : {count}</div>
+      <MyButton  count={count} setCount={setCount}/>
       <Showalert condition={istrue} message="Good Morning! Have a great day!" />
       <Showalert
         condition={!istrue}

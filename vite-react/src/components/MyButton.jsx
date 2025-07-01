@@ -1,6 +1,12 @@
-function MyButton(){
+
+
+function MyButton({count, setCount}) {
+
+  function handleClick() {
+    setCount(count + 1);  
+  }
     return (
-        <button>Hello I'm a Button </button>
+        <button onClick={handleClick}>Increment</button>
     );
 }
 
