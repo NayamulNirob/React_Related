@@ -2,6 +2,7 @@ import "./App.css";
 import ChildComponents from "./components/ChildComponents";
 import Greeting from "./components/Greetings";
 import MyButton from "./components/MyButton";
+import MyButton1 from "./components/MyButton1";
 import ProfileCard from "./components/ProfileCard";
 import Showalert from "./components/ShowAlart";
 import WelcomeMessage from "./components/WelcomeMessage";
@@ -37,7 +38,8 @@ function App() {
       <WelcomeMessage name="Lion" />
       <Greeting istrue={istrue} />
       <div>Count : {count}</div>
-      <MyButton  count={count} setCount={setCount}/>
+      <MyButton  count={count} setCount={setCount}/>&nbsp;&nbsp;
+      <MyButton1 count={count} setCount={setCount} />
       <Showalert condition={istrue} message="Good Morning! Have a great day!" />
       <Showalert
         condition={!istrue}
