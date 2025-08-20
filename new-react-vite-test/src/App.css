@@ -1,0 +1,30 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+h1{
+  color: red;
+}
+h2{
+  color: rgb(232, 15, 240);
+}
+
+.table,th,td{
+  border: 1px  solid;
+  margin: auto;
+  width: 100%;
+  border-collapse: collapse;
+  padding: auto;
+  text-align: center;
+}
+thead{
+  background-color: aqua;
+}
+form{
+  margin-top: 50px;
+  text-align: center;
+
+}
