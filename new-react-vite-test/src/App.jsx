@@ -5,7 +5,7 @@ import Table from "./components/Table";
 function App() {
   return (
     <div className="container">
-      <h1>Hello World</h1>
+      <h1>Welcome To SWEL Bank</h1>
       <Table/>
       <Form/>
     </div>
