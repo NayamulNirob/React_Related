@@ -2,12 +2,14 @@ import { useState } from "react";
 
 function Buttons(){
 const [count, setCount] = useState(0);
+const [step, setStep]=useState(1);
     return(
         
         <div className="container">
         <h2>Set Count: {count}</h2>
-        <button onClick={() => setCount(count + 1)}>Increment</button>
-        <button onClick={() => setCount(count - 1)}>Decrement</button>
+        <input type="number" value={step} onChange={(e)=>setStep(parseInt(e.target.value))}/>
+        <button onClick={() => setCount(count + step)}>Increment</button>
+        <button onClick={() => setCount(count - step)}>Decrement</button>
       </div>
     )
 }
