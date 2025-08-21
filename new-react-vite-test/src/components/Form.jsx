@@ -30,21 +30,17 @@ function Form(){
             <br></br>
             <input type="date"></input>
             <br></br>
+            <label>Select Gender</label><br></br>
             <input type="radio" name="gender" value="Male"></input>
             <label>Male</label>
-            <br></br>
             <input type="radio" name="gender" value="Female"></input>
             <label>Female</label>
-            <br></br>
             <input type="radio" name="gender" value="Lesbiain"></input>
             <label>Lesbiain</label>
-            <br></br>
             <input type="radio" name="gender" value="Gay"></input>
             <label>Gay</label>
-            <br></br>
             <input type="radio" name="gender" value="Bisexual"></input>
             <label>Bisexual</label>
-            <br></br>
             <input type="radio" name="gender" value="Transgender"></input>
             <label>Transgender</label>
             <br></br>
@@ -86,6 +82,7 @@ function Form(){
               <option value="none">None</option>
             </select>
             <br></br>
+            <label>Select Browser</label><br></br>
             <input list="browsers"/>
             <datalist id="browsers">
               <option value="Edge"/>
