@@ -54,3 +54,22 @@ D:\React_Related\vite-react> npm run dev
   ➜  Local:   http://localhost:5173/
   ➜  Network: use --host to expose
   ➜  press h + enter to show help
+
+vite commad for https security
+npm i -D vite-plugin-mkcert
+
+then go to vite.config---
+
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
+import mkcert from 'vite-plugin-mkcert';
+
+// https://vite.dev/config/
+export default defineConfig({
+  plugins: [react(),mkcert()],
+  server:{
+    https:true,
+    port:5009,
+  }
+})
+
